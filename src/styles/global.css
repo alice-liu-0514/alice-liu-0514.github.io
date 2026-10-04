@@ -1,22 +1,23 @@
 /*
-  Visual concept: "The space between" — a person (warm circle) and a machine
-  (cool rounded square) overlapping. Calm, approachable, research-led.
+  Visual concept: "The space between" — a person (circle) and a machine
+  (rounded square) overlapping. Calm, approachable, research-led.
   Full rationale and tokens: kept in the private design notes
 */
 :root {
   color-scheme: light;
-  /* Default palette "clay" (Anthropic brand colors) */
-  --bg: #faf9f5;          /* ivory */
+  /* Default palette "navy" */
+  --bg: #f7f7f4;
   --surface: #ffffff;
-  --panel: #e8e6dc;       /* light gray */
-  --ink: #141413;         /* dark */
-  --ink-soft: #3d3d3a;
+  --panel: #e9e8e3;
+  --ink: #1c1f1d;
+  --ink-soft: #3d3f3c;
   --muted: #62615b;
-  --line: #e0ddd2;
-  --accent: #a94b2a;      /* clay, darkened for text contrast */
-  --human: #d97757;       /* orange — the person */
-  --machine: #b0aea5;     /* mid gray — the machine */
-  --human-soft: #f6e3d9;
+  --line: #dedcd5;
+  --accent: #466891;      /* links */
+  --human: #466891;       /* navy — the person */
+  --machine: #cfccc2;     /* light gray — the machine */
+  --human-soft: #e3e9f1;
+  --dot: #f7f7f4;         /* human judgment, inside the overlap */
   --radius: 14px;
   --content-width: 1080px;
   --reading-width: 680px;
@@ -30,9 +31,14 @@
 }
 
 /*
-  Palette versions. The default above is "clay". To switch, change
+  Palette versions. The default above is "navy". To switch, change
   `palette` in src/data/site.ts. All text colors meet WCAG AA on --bg and --panel.
+  The "clay" family uses Anthropic brand colors.
 */
+:root[data-palette="clay"], :root[data-palette="clay-olive"], :root[data-palette="fig"], :root[data-palette="kraft"] {
+  --bg: #faf9f5; --panel: #e8e6dc; --ink: #141413; --ink-soft: #3d3d3a; --line: #e0ddd2;
+  --accent: #a94b2a; --human: #d97757; --machine: #b0aea5; --human-soft: #f6e3d9; --dot: #141413;
+}
 :root[data-palette="clay-olive"] { --machine: #788c5d; }
 :root[data-palette="fig"] { --human: #c46686; --machine: #cbcadb; --accent: #9b3f63; --human-soft: #f3dfe7; }
 :root[data-palette="kraft"] { --human: #d4a27f; --machine: #788c5d; --accent: #566b3f; --human-soft: #f3e6da; }
@@ -42,7 +48,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: var(--bg); color: var(--ink); font-size: 1.0625rem; line-height: 1.65; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
 a:hover { color: var(--ink); }
-a:focus-visible, summary:focus-visible { outline: 3px solid var(--human); outline-offset: 3px; border-radius: 4px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 ::selection { background: var(--human-soft); color: var(--ink); }
 
 .skip-link { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 20; transform: translateY(-150%); padding: 0.7rem 1rem; border-radius: 8px; background: var(--ink); color: white; }
@@ -62,7 +68,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--human); outlin
 .mobile-nav { display: none; position: relative; }
 .mobile-nav summary { list-style: none; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: 0.95rem; }
 .mobile-nav summary::-webkit-details-marker { display: none; }
-.mobile-nav nav { position: absolute; right: 0; top: calc(100% + 0.6rem); z-index: 10; width: 13rem; padding: 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 34px #1414131a; }
+.mobile-nav nav { position: absolute; right: 0; top: calc(100% + 0.6rem); z-index: 10; width: 13rem; padding: 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 34px #1c1f1d1a; }
 .mobile-nav nav a { display: block; padding: 0.65rem 0.8rem; border-radius: 8px; }
 .mobile-nav nav a[aria-current="page"] { background: var(--panel); color: var(--ink); }
 
@@ -125,7 +131,7 @@ h3 { margin-bottom: 0.35rem; font-size: clamp(1.25rem, 2.2vw, 1.5rem); line-heig
 .path { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 0; padding: 0; list-style: none; counter-reset: step; }
 .path li { counter-increment: step; padding: 1.1rem 1.1rem 1.2rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
 .path li::before { content: counter(step); display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; margin-bottom: 0.7rem; border-radius: 50%; background: var(--human-soft); color: var(--ink); font-size: 0.85rem; font-weight: 600; }
-.path li:last-child::before { background: var(--machine); color: var(--surface); }
+.path li:last-child::before { background: var(--human); color: var(--dot); }
 .path strong { display: block; margin-bottom: 0.3rem; font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
 .path span { color: var(--ink-soft); font-size: 0.93rem; line-height: 1.55; }
 
