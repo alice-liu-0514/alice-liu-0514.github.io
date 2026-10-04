@@ -3,6 +3,7 @@ title: Parent-Teacher Communication Simulator
 subtitle: A risk-free environment for educators to practise difficult conversations
 summary: A conversation simulator informed by teacher interviews, designed to help educators practise parent-teacher communication with dynamic emotional responses.
 status: Completed project
+year: Feb–May 2026
 tags:
   - Education Technology
   - Simulation
@@ -13,7 +14,7 @@ draft: false
 order: 3
 links:
   - label: Cheng Yu-Wei Education Technology Award · Golden Prize
-    note: Public award page to be added when available.
+    note: Link to be added
 ---
 
 ## The need

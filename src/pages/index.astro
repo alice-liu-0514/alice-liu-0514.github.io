@@ -12,44 +12,51 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft && d
   <div class="page-shell">
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <p class="eyebrow">Researcher · Human-AI Interaction</p>
         <h1 id="hero-title">Yun-Chen Liu <span class="name-note">(Alice)</span></h1>
         <p class="identity-line">Psychology × Human-AI Interaction × Social Innovation</p>
-        <p class="hero-summary">I am a psychology-trained researcher exploring how emerging technologies can augment human capability without weakening human agency, judgment, and relationships. My work spans Human-AI Interaction, technology for well-being, education, mental health, and social innovation.</p>
+        <p class="hero-summary">I am a psychology-trained researcher exploring how emerging technologies can augment human capability without weakening human agency, judgment, and relationships.</p>
+        <p class="body-copy">My work spans Human-AI Interaction, technology for well-being, education, mental health, and social innovation.</p>
         <div class="hero-actions" aria-label="Explore the site">
           <a class="action-link primary" href="#selected-projects">Selected Projects</a>
           <a class="action-link" href="/about/">About Me</a>
           <a class="action-link" href="/cv/">CV</a>
         </div>
+        <p class="affiliation-line">Department of Psychology, National Taiwan University<br />Currently an exchange student at the Singapore University of Technology and Design</p>
       </div>
-      <aside class="affiliation-block" aria-label="Current affiliations">
-        <p class="eyebrow">Current affiliations</p>
-        <p>Department of Psychology<br />National Taiwan University</p>
-        <p>Exchange student<br />Singapore University of Technology and Design</p>
-      </aside>
+      <figure class="hero-figure">
+        <svg viewBox="0 0 320 260" role="img" aria-labelledby="hero-figure-title">
+          <title id="hero-figure-title">A warm circle for a person and a cool rounded square for a machine, overlapping</title>
+          <circle cx="124" cy="132" r="100" fill="#eba83a" />
+          <rect x="140" y="40" width="160" height="184" rx="44" fill="#6e9cb5" style="mix-blend-mode: multiply" />
+          <circle cx="182" cy="132" r="9" fill="#1e3634" />
+        </svg>
+        <figcaption>People, machines, and the space between them</figcaption>
+      </figure>
     </section>
 
     <section class="question-band" aria-labelledby="guiding-question">
-      <h2 id="guiding-question">A guiding question</h2>
+      <h2 id="guiding-question">The question that guides my work</h2>
       <blockquote>How can AI augment human capability without weakening human agency, judgment, and relationships?</blockquote>
     </section>
 
     <section class="home-section" id="selected-projects" aria-labelledby="selected-projects-title">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">Research in practice</p>
-          <h2 id="selected-projects-title">Selected Projects</h2>
-        </div>
-        <a href="/projects/">View all projects <span aria-hidden="true">→</span></a>
+        <h2 id="selected-projects-title">Selected Projects</h2>
+        <a href="/projects/">All projects</a>
       </div>
       <div class="project-list">
-        {projects.map((project, index) => <ProjectRow project={project} index={index} />)}
+        {projects.map((project) => <ProjectRow project={project} />)}
       </div>
     </section>
 
-    <section class="throughline" aria-label="Research throughline">
-      <p class="eyebrow">What connects this work</p>
-      <p>Psychology helps me understand human needs and behavior. Social innovation brings those questions into real support systems. Building AI interventions has led me to study how technology can strengthen, rather than displace, human judgment and relationships.</p>
+    <section class="throughline" aria-labelledby="throughline-title">
+      <h2 id="throughline-title">How my questions have changed</h2>
+      <ol class="path">
+        <li><strong>Psychology</strong><span>Understanding human needs, behavior, and well-being.</span></li>
+        <li><strong>Social innovation</strong><span>Bringing those questions into real support systems, with practitioners.</span></li>
+        <li><strong>Building AI interventions</strong><span>Learning that efficiency alone does not make technology useful or responsible.</span></li>
+        <li><strong>Human-AI relationships</strong><span>Studying trust, agency, and judgment so AI augments people rather than replaces them.</span></li>
+      </ol>
     </section>
   </div>
 </SiteLayout>

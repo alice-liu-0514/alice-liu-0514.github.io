@@ -5,7 +5,7 @@ export const site = {
   description:
     'Yun-Chen Liu is a psychology-trained researcher exploring human-centered AI, technology for well-being, and social innovation.',
   linkedin: 'https://www.linkedin.com/in/alice-yunchen-liu/',
-  email: '',
+  email: 'absolutealice0514@gmail.com',
   affiliations: [
     'Department of Psychology, National Taiwan University',
     'Exchange student, Singapore University of Technology and Design',

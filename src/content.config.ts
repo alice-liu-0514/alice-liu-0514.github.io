@@ -9,6 +9,7 @@ const projects = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
+    alias: z.string().optional(),
     subtitle: z.string(),
     summary: z.string(),
     date: z.coerce.date().optional(),
@@ -16,6 +17,7 @@ const projects = defineCollection({
     status: z.string(),
     role: z.string().optional(),
     organization: z.string().optional(),
+    orgLabel: z.string().default('Organization'),
     location: z.string().optional(),
     cover: z.string().optional(),
     coverAlt: z.string().optional(),

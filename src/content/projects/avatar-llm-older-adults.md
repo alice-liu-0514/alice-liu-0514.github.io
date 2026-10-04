@@ -4,6 +4,7 @@ subtitle: Exploring social and cognitive engagement through avatar-guided intera
 summary: Current research at SUTD exploring avatar-guided and LLM-supported social and cognitive engagement for older adults.
 status: Current research
 organization: Singapore University of Technology and Design
+orgLabel: Institution
 tags:
   - Human-AI Interaction
   - Healthy Aging

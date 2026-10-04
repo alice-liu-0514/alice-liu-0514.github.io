@@ -3,22 +3,24 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   project: CollectionEntry<'projects'>;
-  index?: number;
 }
 
-const { project, index } = Astro.props;
+const { project } = Astro.props;
 const { data, id } = project;
+const meta = [data.role ?? data.status, data.organization, data.year].filter(Boolean).join(', ');
 ---
 
 <article class="project-row">
-  {index !== undefined && <p class="project-index">{String(index + 1).padStart(2, '0')}</p>}
-  <div class="project-row-main">
-    <div class="project-row-heading">
-      <p class="eyebrow project-status">{data.status}{data.year ? ` · ${data.year}` : ''}</p>
-      <h3><a href={`/projects/${id}/`}>{data.title}<span class="arrow" aria-hidden="true">↗</span></a></h3>
-      <p class="project-subtitle">{data.subtitle}</p>
-    </div>
-    <p class="project-summary">{data.summary}</p>
-    {data.tags.length > 0 && <p class="project-topics">{data.tags.slice(0, 3).join(' · ')}</p>}
+  <div class="project-row-heading">
+    <p class="eyebrow project-status">{meta}</p>
+    <h3><a href={`/projects/${id}/`}>{data.title}</a></h3>
+    <p class="project-subtitle">{data.subtitle}</p>
   </div>
+  <p class="project-summary">{data.summary}</p>
+  {data.metrics.length > 0 && (
+    <ul class="row-metrics" aria-label="Key outcomes">
+      {data.metrics.map((metric) => <li><strong>{metric.value}</strong>{metric.label.toLowerCase()}</li>)}
+    </ul>
+  )}
+  {data.tags.length > 0 && <p class="project-topics">{data.tags.slice(0, 4).join(', ')}</p>}
 </article>

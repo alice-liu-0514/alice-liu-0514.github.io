@@ -35,7 +35,10 @@ const personSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f8f7f2" />
+    <meta name="theme-color" content="#f4f6f3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" />
     <title>{pageTitle}</title>
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -55,7 +58,13 @@ const personSchema = {
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="wordmark" href="/" aria-label={`${site.name}, home`}>Yun-Chen Liu <span>(Alice)</span></a>
+        <a class="wordmark" href="/" aria-label={`${site.name}, home`}>
+          <svg class="wordmark-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" fill="#eba83a" />
+            <rect x="9" y="1" width="16" height="18" rx="5" fill="#6e9cb5" style="mix-blend-mode: multiply" />
+          </svg>
+          Yun-Chen Liu <span>(Alice)</span>
+        </a>
         <nav class="desktop-nav" aria-label="Main navigation">
           {navigation.map((item) => (
             <a href={item.href} aria-current={activePath === item.href ? 'page' : undefined}>{item.label}</a>
@@ -77,8 +86,11 @@ const personSchema = {
     <footer class="site-footer">
       <div class="footer-inner">
         <p>Yun-Chen Liu (Alice)</p>
-        <p>Psychology · Human-AI Interaction · Social Innovation</p>
-        <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <p>Psychology × Human-AI Interaction × Social Innovation</p>
+        <p>
+          {site.email && <><a href={`mailto:${site.email}`}>Email</a> · </>}
+          <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
       </div>
     </footer>
   </body>

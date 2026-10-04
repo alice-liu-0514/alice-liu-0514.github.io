@@ -15,7 +15,8 @@ import { site } from '../data/site';
       <h2>Education</h2>
       <div class="cv-entry">
         <h3>National Taiwan University</h3>
-        <p>Department of Psychology</p>
+        <p>Bachelor, Department of Psychology</p>
+        <p class="cv-date">Sep 2022 – Aug 2027 (expected)</p>
       </div>
     </section>
 
@@ -30,9 +31,15 @@ import { site } from '../data/site';
     <section class="cv-group">
       <h2>Research</h2>
       <div class="cv-entry">
-        <h3>Research Assistant · NTU EPA Lab</h3>
+        <h3>Adjunct Research Assistant, NTU EPA Lab</h3>
+        <p class="cv-date">Feb 2025 – Aug 2026</p>
         <p>Research on AI-supported mental health, emotion regulation, Human-Computer Interaction, and chatbot design.</p>
-        <p>Conducted interviews with 20+ participants and qualitatively analyzed nearly 200 conversation transcripts. Findings presented at the 2025 Annual Convention of the Taiwanese Psychological Association; a workshop paper at IEEE RO-MAN 2026; journal manuscript in preparation.</p>
+        <p>Conducted in-depth interviews with 20+ participants and qualitatively coded nearly 200 conversation transcripts for emotion-regulation strategies. Findings presented at the 2025 Annual Convention of the Taiwanese Psychological Association; a workshop paper at IEEE RO-MAN 2026; journal manuscript in preparation.</p>
+      </div>
+      <div class="cv-entry">
+        <h3>Adjunct Research Assistant, NTHU AIFR Lab</h3>
+        <p class="cv-date">Feb 2026 – present</p>
+        <p>Leading background research, system design, and development of an AI-assisted case-analysis tool for practicing psychologists.</p>
       </div>
     </section>
 
@@ -40,21 +47,22 @@ import { site } from '../data/site';
       <h2>Selected work</h2>
       <div>
         <div class="cv-entry">
-          <h3>Project Lead · The Second Door</h3>
-          <p>Young Fly Global Action Plan, Taiwan · 2025</p>
+          <h3><a href="/projects/the-second-door/">The Second Door</a>, Project Lead</h3>
+          <p class="cv-date">Young Fly Global Action Plan, Ministry of Education, Feb–Dec 2025</p>
           <p>Led a human-centered AI project for social workers supporting justice-involved youth. Interviewed 9 frontline social workers and domain experts, developed an AI-assisted record-keeping system, and collected 30 trial feedback responses within one week.</p>
         </div>
         <div class="cv-entry">
-          <h3>Research Assistant / System Designer · AI-Assisted Case Analysis</h3>
+          <h3><a href="/projects/ai-assisted-case-analysis/">AI-Assisted Case Analysis</a>, System Designer</h3>
           <p>Designed AI as a reflective partner for psychologists’ case conceptualization.</p>
         </div>
         <div class="cv-entry">
-          <h3>Parent-Teacher Communication Simulator</h3>
+          <h3><a href="/projects/parent-teacher-communication-simulator/">Parent-Teacher Communication Simulator</a></h3>
+          <p class="cv-date">Feb–May 2026</p>
           <p>Built a conversation simulator for educators; recipient of the Golden Prize, Cheng Yu-Wei Education Technology Award.</p>
         </div>
       </div>
     </section>
 
-    <p class="cv-note">A downloadable PDF CV can be added here once the public version is provided. Current affiliations: {site.affiliations.join(' · ')}.</p>
+    <p class="cv-note">Current affiliations: {site.affiliations.join('; ')}.</p>
   </div>
 </SiteLayout>

@@ -15,7 +15,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft))
       <p class="lead">Work that begins with people’s needs and asks what technology should contribute.</p>
     </header>
     <div class="project-list">
-      {projects.map((project, index) => <ProjectRow project={project} index={index} />)}
+      {projects.map((project) => <ProjectRow project={project} />)}
     </div>
   </div>
 </SiteLayout>

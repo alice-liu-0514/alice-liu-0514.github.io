@@ -50,11 +50,6 @@ Research records currently distinguish a 2025 conference presentation, a 2026 wo
 3. Replace the clearly marked evidence-link notes in the project files with verified public project, presentation, demo, media, and award URLs.
 4. Set `SITE_URL` to the canonical production URL. This controls canonical tags, Open Graph URLs, the sitemap, and the sitemap line in `robots.txt`.
 
-## Deploy to Vercel
+## Deploy
 
-1. Push this repository to GitHub.
-2. Import the repository in Vercel. Vercel detects Astro and uses `npm run build` with `dist/` as the output directory.
-3. Set `SITE_URL` in the Vercel production environment to the public deployment URL, then redeploy.
-4. When you buy a custom domain, add it in the Vercel project settings and follow the DNS records Vercel provides. Update `SITE_URL` to the custom domain and redeploy.
-
-The project is static by default and does not need a Vercel server adapter. No Vercel account, GitHub remote, domain, or public deployment is configured in this repository yet.
+The site deploys to GitHub Pages at https://alice-liu-0514.github.io/ through `.github/workflows/deploy.yml` on every push to `main`. The workflow sets `SITE_URL`; update it there when a custom domain is added (and add the domain under the repository's Settings → Pages).
