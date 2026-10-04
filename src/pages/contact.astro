@@ -1,0 +1,25 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { site } from '../data/site';
+---
+
+<SiteLayout title="Contact" description="Contact Yun-Chen Liu (Alice) about research, Human-AI Interaction, well-being, and social innovation." activePath="/contact/">
+  <div class="narrow-shell">
+    <header class="page-intro">
+      <p class="eyebrow">Contact</p>
+      <h1>Connect around thoughtful, human-centered research.</h1>
+      <p class="lead">I welcome conversations about research collaboration, fellowship opportunities, and work at the intersection of psychology, Human-AI Interaction, and social innovation.</p>
+    </header>
+
+    <ul class="contact-list">
+      <li><strong>Name</strong><span>{site.name}</span></li>
+      <li>
+        <strong>Email</strong>
+        {site.email
+          ? <a href={`mailto:${site.email}`}>{site.email}</a>
+          : <span class="placeholder-note">Public email address to add before launch.</span>}
+      </li>
+      <li><strong>LinkedIn</strong><a href={site.linkedin} target="_blank" rel="noreferrer">Connect with me on LinkedIn <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+</SiteLayout>

@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectRow from '../components/ProjectRow.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { site } from '../data/site';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft && data.featured))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<SiteLayout title={site.name} description={site.description} activePath="/">
+  <div class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Researcher · Human-AI Interaction</p>
+        <h1 id="hero-title">Yun-Chen Liu <span class="name-note">(Alice)</span></h1>
+        <p class="identity-line">Psychology × Human-AI Interaction × Social Innovation</p>
+        <p class="hero-summary">I am a psychology-trained researcher exploring how emerging technologies can augment human capability without weakening human agency, judgment, and relationships. My work spans Human-AI Interaction, technology for well-being, education, mental health, and social innovation.</p>
+        <div class="hero-actions" aria-label="Explore the site">
+          <a class="action-link primary" href="#selected-projects">Selected Projects</a>
+          <a class="action-link" href="/about/">About Me</a>
+          <a class="action-link" href="/cv/">CV</a>
+        </div>
+      </div>
+      <aside class="affiliation-block" aria-label="Current affiliations">
+        <p class="eyebrow">Current affiliations</p>
+        <p>Department of Psychology<br />National Taiwan University</p>
+        <p>Exchange student<br />Singapore University of Technology and Design</p>
+      </aside>
+    </section>
+
+    <section class="question-band" aria-labelledby="guiding-question">
+      <h2 id="guiding-question">A guiding question</h2>
+      <blockquote>How can AI augment human capability without weakening human agency, judgment, and relationships?</blockquote>
+    </section>
+
+    <section class="home-section" id="selected-projects" aria-labelledby="selected-projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Research in practice</p>
+          <h2 id="selected-projects-title">Selected Projects</h2>
+        </div>
+        <a href="/projects/">View all projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="project-list">
+        {projects.map((project, index) => <ProjectRow project={project} index={index} />)}
+      </div>
+    </section>
+
+    <section class="throughline" aria-label="Research throughline">
+      <p class="eyebrow">What connects this work</p>
+      <p>Psychology helps me understand human needs and behavior. Social innovation brings those questions into real support systems. Building AI interventions has led me to study how technology can strengthen, rather than displace, human judgment and relationships.</p>
+    </section>
+  </div>
+</SiteLayout>

@@ -1,0 +1,39 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { site } from '../data/site';
+---
+
+<SiteLayout title="About" description="Learn about Yun-Chen Liu (Alice), a psychology-trained researcher working across Human-AI Interaction, well-being, and social innovation." activePath="/about/">
+  <div class="narrow-shell">
+    <header class="page-intro">
+      <p class="eyebrow">About</p>
+      <h1>From understanding people to shaping technology around them.</h1>
+      <p class="lead">I am Yun-Chen Liu (Alice), a psychology-trained researcher interested in how technology changes the ways people think, learn, make decisions, and support one another.</p>
+    </header>
+
+    <div class="body-copy">
+      <p>I was trained in psychology and became interested in technology through questions about human behavior, well-being, and support systems. My work has moved from asking whether AI could solve human problems to asking how AI systems influence human judgment, trust, agency, learning, and relationships.</p>
+      <p>Across research and social-impact projects, I work to understand people’s needs before deciding what technology should do. I am especially interested in AI that supports practitioners and communities while leaving interpretation, responsibility, and human connection with people.</p>
+    </div>
+
+    <section class="page-section" aria-labelledby="interests-title">
+      <h2 id="interests-title">Research interests</h2>
+      <div class="split-list">
+        <article class="split-item"><h3>Human-AI Interaction</h3><p>How people interpret, trust, and work with AI systems in consequential settings.</p></article>
+        <article class="split-item"><h3>Human agency and judgment</h3><p>How AI can expand people’s options while keeping decisions and responsibility meaningfully human.</p></article>
+        <article class="split-item"><h3>Technology for well-being</h3><p>AI-supported mental health, emotion regulation, social connection, and care.</p></article>
+        <article class="split-item"><h3>Learning and social innovation</h3><p>Technology designed around the realities of educators, practitioners, and underserved communities.</p></article>
+      </div>
+    </section>
+
+    <p class="trajectory">“How can AI augment human capability without weakening human agency, judgment, and relationships?” is the question that now guides much of my work.</p>
+
+    <section class="page-section" aria-labelledby="affiliations-title">
+      <h2 id="affiliations-title">Current affiliations</h2>
+      <div class="body-copy">
+        <p>{site.affiliations[0]}</p>
+        <p>{site.affiliations[1]}</p>
+      </div>
+    </section>
+  </div>
+</SiteLayout>

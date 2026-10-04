@@ -1,0 +1,60 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { site } from '../data/site';
+---
+
+<SiteLayout title="CV" description="Web CV of Yun-Chen Liu (Alice), psychology-trained researcher in Human-AI Interaction and social innovation." activePath="/cv/">
+  <div class="narrow-shell">
+    <header class="page-intro">
+      <p class="eyebrow">Curriculum vitae</p>
+      <h1>Yun-Chen Liu <span class="name-note">(Alice)</span></h1>
+      <p class="lead">Psychology-trained researcher working across Human-AI Interaction, technology for well-being, and social innovation.</p>
+    </header>
+
+    <section class="cv-group">
+      <h2>Education</h2>
+      <div class="cv-entry">
+        <h3>National Taiwan University</h3>
+        <p>Department of Psychology</p>
+      </div>
+    </section>
+
+    <section class="cv-group">
+      <h2>Exchange</h2>
+      <div class="cv-entry">
+        <h3>Singapore University of Technology and Design</h3>
+        <p>Exchange student</p>
+      </div>
+    </section>
+
+    <section class="cv-group">
+      <h2>Research</h2>
+      <div class="cv-entry">
+        <h3>Research Assistant · NTU EPA Lab</h3>
+        <p>Research on AI-supported mental health, emotion regulation, Human-Computer Interaction, and chatbot design.</p>
+        <p>Conducted interviews with 20+ participants and qualitatively analyzed nearly 200 conversation transcripts. Findings presented at the 2025 Annual Convention of the Taiwanese Psychological Association; a workshop paper at IEEE RO-MAN 2026; journal manuscript in preparation.</p>
+      </div>
+    </section>
+
+    <section class="cv-group">
+      <h2>Selected work</h2>
+      <div>
+        <div class="cv-entry">
+          <h3>Project Lead · The Second Door</h3>
+          <p>Young Fly Global Action Plan, Taiwan · 2025</p>
+          <p>Led a human-centered AI project for social workers supporting justice-involved youth. Interviewed 9 frontline social workers and domain experts, developed an AI-assisted record-keeping system, and collected 30 trial feedback responses within one week.</p>
+        </div>
+        <div class="cv-entry">
+          <h3>Research Assistant / System Designer · AI-Assisted Case Analysis</h3>
+          <p>Designed AI as a reflective partner for psychologists’ case conceptualization.</p>
+        </div>
+        <div class="cv-entry">
+          <h3>Parent-Teacher Communication Simulator</h3>
+          <p>Built a conversation simulator for educators; recipient of the Golden Prize, Cheng Yu-Wei Education Technology Award.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="cv-note">A downloadable PDF CV can be added here once the public version is provided. Current affiliations: {site.affiliations.join(' · ')}.</p>
+  </div>
+</SiteLayout>
