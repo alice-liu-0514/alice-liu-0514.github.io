@@ -5,7 +5,7 @@
 */
 :root {
   color-scheme: light;
-  /* Default palette "navy" */
+  /* Default palette "teal" */
   --bg: #f7f7f4;
   --surface: #ffffff;
   --panel: #e9e8e3;
@@ -13,10 +13,10 @@
   --ink-soft: #3d3f3c;
   --muted: #62615b;
   --line: #dedcd5;
-  --accent: #466891;      /* links */
-  --human: #466891;       /* navy — the person */
+  --accent: #0a7069;      /* links (darker teal for text contrast) */
+  --human: #14a39a;       /* teal — the person */
   --machine: #cfccc2;     /* light gray — the machine */
-  --human-soft: #e3e9f1;
+  --human-soft: #d6efec;
   --dot: #f7f7f4;         /* human judgment, inside the overlap */
   --radius: 14px;
   --content-width: 1080px;
@@ -31,7 +31,7 @@
 }
 
 /*
-  Palette versions. The default above is "navy". To switch, change
+  Palette versions. The default above is "teal". To switch, change
   `palette` in src/data/site.ts. All text colors meet WCAG AA on --bg and --panel.
   The "clay" family uses Anthropic brand colors.
 */
@@ -39,6 +39,7 @@
   --bg: #faf9f5; --panel: #e8e6dc; --ink: #141413; --ink-soft: #3d3d3a; --line: #e0ddd2;
   --accent: #a94b2a; --human: #d97757; --machine: #b0aea5; --human-soft: #f6e3d9; --dot: #141413;
 }
+:root[data-palette="navy"] { --accent: #466891; --human: #466891; --human-soft: #e3e9f1; }
 :root[data-palette="clay-olive"] { --machine: #788c5d; }
 :root[data-palette="fig"] { --human: #c46686; --machine: #cbcadb; --accent: #9b3f63; --human-soft: #f3dfe7; }
 :root[data-palette="kraft"] { --human: #d4a27f; --machine: #788c5d; --accent: #566b3f; --human-soft: #f3e6da; }
@@ -131,7 +132,7 @@ h3 { margin-bottom: 0.35rem; font-size: clamp(1.25rem, 2.2vw, 1.5rem); line-heig
 .path { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 0; padding: 0; list-style: none; counter-reset: step; }
 .path li { counter-increment: step; padding: 1.1rem 1.1rem 1.2rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
 .path li::before { content: counter(step); display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; margin-bottom: 0.7rem; border-radius: 50%; background: var(--human-soft); color: var(--ink); font-size: 0.85rem; font-weight: 600; }
-.path li:last-child::before { background: var(--human); color: var(--dot); }
+.path li:last-child::before { background: var(--accent); color: var(--surface); }
 .path strong { display: block; margin-bottom: 0.3rem; font-family: var(--serif); font-size: 1.12rem; font-weight: 500; }
 .path span { color: var(--ink-soft); font-size: 0.93rem; line-height: 1.55; }
 
