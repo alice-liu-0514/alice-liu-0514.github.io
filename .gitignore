@@ -6,3 +6,31 @@ dist/
 .env.*
 !.env.example
 .DS_Store
+
+# Never commit: documents, data, recordings, keys, private notes.
+# Policy: /Users/aliceliu/personal-site-notes/REPO-CONTENT-POLICY.md
+*.pdf
+!public/cv/*-public.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.key
+*.xls
+*.xlsx
+*.csv
+*.sav
+*.numbers
+*.pages
+*.m4a
+*.mp3
+*.wav
+*.mov
+*.pem
+*.p12
+id_rsa*
+private/
+notes/
+data/
+.claude/
+.codex/

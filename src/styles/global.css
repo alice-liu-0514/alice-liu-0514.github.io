@@ -5,7 +5,7 @@
 */
 :root {
   color-scheme: light;
-  /* Anthropic brand palette */
+  /* Default palette "clay" (Anthropic brand colors) */
   --bg: #faf9f5;          /* ivory */
   --surface: #ffffff;
   --panel: #e8e6dc;       /* light gray */
@@ -28,6 +28,14 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
+
+/*
+  Palette versions. The default above is "clay". To switch, change
+  `palette` in src/data/site.ts. All text colors meet WCAG AA on --bg and --panel.
+*/
+:root[data-palette="clay-olive"] { --machine: #788c5d; }
+:root[data-palette="fig"] { --human: #c46686; --machine: #cbcadb; --accent: #9b3f63; --human-soft: #f3dfe7; }
+:root[data-palette="kraft"] { --human: #d4a27f; --machine: #788c5d; --accent: #566b3f; --human-soft: #f3e6da; }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
