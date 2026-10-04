@@ -25,10 +25,10 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft && d
       </div>
       <figure class="hero-figure">
         <svg viewBox="0 0 320 260" role="img" aria-labelledby="hero-figure-title">
-          <title id="hero-figure-title">A warm circle for a person and a cool rounded square for a machine, overlapping</title>
-          <circle cx="124" cy="132" r="100" fill="#eba83a" />
-          <rect x="140" y="40" width="160" height="184" rx="44" fill="#6e9cb5" style="mix-blend-mode: multiply" />
-          <circle cx="182" cy="132" r="9" fill="#1e3634" />
+          <title id="hero-figure-title">A warm circle for a person and a gray rounded square for a machine, overlapping</title>
+          <circle cx="124" cy="132" r="100" style="fill: var(--human)" />
+          <rect x="140" y="40" width="160" height="184" rx="44" style="fill: var(--machine); mix-blend-mode: multiply" />
+          <circle cx="182" cy="132" r="9" style="fill: var(--ink)" />
         </svg>
         <figcaption>People, machines, and the space between them</figcaption>
       </figure>

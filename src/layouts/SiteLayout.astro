@@ -11,7 +11,7 @@ interface Props {
 const { title, description, activePath = Astro.url.pathname } = Astro.props;
 const pageTitle = title === site.name ? title : `${title} | ${site.name}`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
-const socialImage = Astro.site ? new URL('/og-default.svg', Astro.site).toString() : undefined;
+const socialImage = Astro.site ? new URL('/og-default.png', Astro.site).toString() : undefined;
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -35,7 +35,7 @@ const personSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f4f6f3" />
+    <meta name="theme-color" content="#faf9f5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" />
@@ -60,8 +60,8 @@ const personSchema = {
       <div class="header-inner">
         <a class="wordmark" href="/" aria-label={`${site.name}, home`}>
           <svg class="wordmark-mark" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true">
-            <circle cx="10" cy="10" r="9" fill="#eba83a" />
-            <rect x="9" y="1" width="16" height="18" rx="5" fill="#6e9cb5" style="mix-blend-mode: multiply" />
+            <circle cx="10" cy="10" r="9" style="fill: var(--human)" />
+            <rect x="9" y="1" width="16" height="18" rx="5" style="fill: var(--machine); mix-blend-mode: multiply" />
           </svg>
           Yun-Chen Liu <span>(Alice)</span>
         </a>

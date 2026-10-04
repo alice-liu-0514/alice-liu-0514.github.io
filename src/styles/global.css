@@ -5,17 +5,18 @@
 */
 :root {
   color-scheme: light;
-  --bg: #f4f6f3;          /* mist */
+  /* Anthropic brand palette */
+  --bg: #faf9f5;          /* ivory */
   --surface: #ffffff;
-  --panel: #e6ede8;       /* sage panel */
-  --ink: #1e3634;         /* deep teal ink */
-  --ink-soft: #435756;
-  --muted: #5e6f6e;
-  --line: #d4ddd8;
-  --accent: #2f6f68;      /* links, focus */
-  --human: #eba83a;       /* marigold — the person */
-  --machine: #6e9cb5;     /* lake blue — the machine */
-  --human-soft: #fbecd0;
+  --panel: #e8e6dc;       /* light gray */
+  --ink: #141413;         /* dark */
+  --ink-soft: #3d3d3a;
+  --muted: #62615b;
+  --line: #e0ddd2;
+  --accent: #a94b2a;      /* clay, darkened for text contrast */
+  --human: #d97757;       /* orange — the person */
+  --machine: #b0aea5;     /* mid gray — the machine */
+  --human-soft: #f6e3d9;
   --radius: 14px;
   --content-width: 1080px;
   --reading-width: 680px;
@@ -53,7 +54,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--human); outlin
 .mobile-nav { display: none; position: relative; }
 .mobile-nav summary { list-style: none; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: 0.95rem; }
 .mobile-nav summary::-webkit-details-marker { display: none; }
-.mobile-nav nav { position: absolute; right: 0; top: calc(100% + 0.6rem); z-index: 10; width: 13rem; padding: 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 34px #1e36341a; }
+.mobile-nav nav { position: absolute; right: 0; top: calc(100% + 0.6rem); z-index: 10; width: 13rem; padding: 0.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 34px #1414131a; }
 .mobile-nav nav a { display: block; padding: 0.65rem 0.8rem; border-radius: 8px; }
 .mobile-nav nav a[aria-current="page"] { background: var(--panel); color: var(--ink); }
 
