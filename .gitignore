@@ -8,7 +8,7 @@ dist/
 .DS_Store
 
 # Never commit: documents, data, recordings, keys, private notes.
-# Policy: /Users/aliceliu/personal-site-notes/REPO-CONTENT-POLICY.md
+# Policy: notes/REPO-CONTENT-POLICY.md (local only)
 *.pdf
 !public/cv/*-public.pdf
 *.doc
