@@ -24,12 +24,29 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft && d
         <p class="affiliation-line">Department of Psychology, National Taiwan University<br />Currently an exchange student at the Singapore University of Technology and Design</p>
       </div>
       <figure class="hero-figure">
+        {site.hero === 'a' ? (
         <svg viewBox="0 0 320 260" role="img" aria-labelledby="hero-figure-title">
           <title id="hero-figure-title">A blue circle for a person and a gray rounded square for a machine, overlapping</title>
           <circle cx="124" cy="132" r="100" style="fill: var(--human)" />
           <rect x="140" y="40" width="160" height="184" rx="44" style="fill: var(--machine); mix-blend-mode: multiply" />
           <circle cx="182" cy="132" r="9" style="fill: var(--dot)" />
         </svg>
+        ) : site.hero === 'b' ? (
+          <svg viewBox="0 0 320 260" role="img" aria-labelledby="hero-figure-title">
+            <title id="hero-figure-title">A person and a machine in dialogue, with space for independent judgment</title>
+            <circle cx="86" cy="130" r="62" style="fill: var(--human)" />
+            <rect x="194" y="68" width="102" height="124" rx="30" style="fill: var(--machine)" />
+            <path d="M138 101 Q170 76 202 101 M138 159 Q170 184 202 159" fill="none" stroke-width="2" stroke-linecap="round" style="stroke: var(--ink-soft)" />
+            <circle cx="109" cy="130" r="9" style="fill: var(--dot)" />
+          </svg>
+        ) : (
+          <svg viewBox="0 0 320 260" role="img" aria-labelledby="hero-figure-title">
+            <title id="hero-figure-title">A machine provides a supporting frame while human judgment remains at the center</title>
+            <path d="M64 108 V191 Q64 218 91 218 H229 Q256 218 256 191 V108" fill="none" stroke-width="30" stroke-linecap="round" style="stroke: var(--machine)" />
+            <circle cx="160" cy="104" r="65" style="fill: var(--human)" />
+            <circle cx="160" cy="104" r="9" style="fill: var(--dot)" />
+          </svg>
+        )}
         <figcaption>People, machines, and the space between them</figcaption>
       </figure>
     </section>
