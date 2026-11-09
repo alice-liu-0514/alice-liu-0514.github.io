@@ -13,8 +13,8 @@ featured: true
 draft: false
 order: 3
 links:
-  - label: Cheng Yu-Wei Education Technology Award · Golden Prize
-    note: Link to be added
+  - label: Cheng Yu-Wei Education Technology Award · Golden Prize (Chinese)
+    href: https://www.chengzhiedu.org/about/%E7%A8%8B%E6%9C%89%E5%A8%81%E5%85%88%E7%94%9F%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80%E7%8D%8E/
 ---
 
 ## The need

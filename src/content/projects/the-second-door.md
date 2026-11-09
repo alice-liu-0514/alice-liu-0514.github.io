@@ -42,10 +42,6 @@ links:
     href: https://www.yda.gov.tw/plan.aspx?p=1014&rn=6687
   - label: Yun-Chen Liu on LinkedIn
     href: https://www.linkedin.com/in/alice-yunchen-liu/
-  - label: Project presentation or demo
-    note: Link to be added
-  - label: Related media or documentation
-    note: Link to be added
 ---
 
 ## The Challenge
