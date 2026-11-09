@@ -19,8 +19,8 @@ draft: false
 order: 1
 metrics:
   - value: 83%
-    label: Reduction in documentation time
-    note: Average writing time fell from 7.5 to 1.3 hours
+    label: Estimated reduction in documentation time
+    note: Trial users estimated their documentation time fell from 7.5 to 1.3 hours
   - value: 83%
     label: Of trial users rated the system easy to use
     note: Based on System Usability Scale items; Net Promoter Score +40
